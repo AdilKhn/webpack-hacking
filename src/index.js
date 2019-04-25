@@ -1,18 +1,7 @@
 import uniq from 'lodash/uniq';
 import Foo from './foo';
-const foo = [1,2,3,4,3,4,6];
+import {actionCreator, actionFactory} from './factoryPattern';
 
-const doubleIt = (a) => {
-  return a.map((ele) =>  ele*2);
-}
+let wrappedActionCreator = actionFactory(actionCreator);
 
-const uniqIt = (a) => {
-  return uniq(a);
-}
-
-
-console.log(doubleIt(foo));
-console.log(uniqIt(foo));
-console.log(uniqIt(foo));
-new Foo().doThis();
-console.log('this looks good');
+wrappedActionCreator().method()

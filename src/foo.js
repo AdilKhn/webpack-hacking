@@ -4,6 +4,6 @@ export default class Foo {
   }
 
   doThis() {
-    console.log('Doing This'); 
+    console.log('Doing This~'); 
   }
 }
